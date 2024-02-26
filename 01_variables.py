@@ -1,4 +1,4 @@
-# Variables
+### VARIABLES ###
 new_str_variable = "New String Variable"
 print(new_str_variable)
 

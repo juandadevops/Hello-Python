@@ -15,9 +15,11 @@ print("Format")
 name = "Juan David"
 surname = "Corrales"
 age = 24
+
 print("My name is {} {} and I am {}".format(name, surname, age))
 print("My name is %s %s and I am %d" %(name, surname, age))
 print(f"My name is {name} {surname} and I am {age}")
+
 
 # Desempaqueado de caracteres
 print("Desempaqueado")

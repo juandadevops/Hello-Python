@@ -64,3 +64,154 @@ def print_texts(*texts):
 print_texts("Hola", "C#", "JuandaDevOps")
 print_texts("Hola", "C#", "JuandaDevOps", "Padel")
 print_texts("Hola")
+
+
+####################################################################
+######################## Exercises: Level 2 ########################
+####################################################################
+
+######################## EXERCISE 1 ########################
+def evens_and_odds(positive_number):
+    """Declare a function named evens_and_odds . It takes a positive integer 
+        as parameter and it counts number of evens and odds in the number.
+
+    Args:
+        positive_number (int): Positive integer
+    """
+    evens = 0
+    odds = 0
+    
+    if type(positive_number) == int and positive_number > 0:
+        while positive_number >= 0:
+            if positive_number % 2 == 0:
+                evens += 1
+            else:
+                odds += 1
+            positive_number -= 1
+        
+        print(f"The number of odds are {odds}")
+        print(f"The number of evens are {evens}")     
+    else:
+        print("El parametro debe ser un numero entero positivo")
+    
+evens_and_odds(100)
+
+
+######################## EXERCISE 2 ########################
+def factorial(n):
+    if n < 0:
+        return "Factorial is not defined for negative numbers"
+    elif n == 0 or n == 1:
+        return 1
+    else:
+        result = 1
+        for i in range(2, n + 1):
+            result *= i
+        return result
+
+# Example usage
+number = 5
+result = factorial(number)
+print(f"The factorial of {number} is: {result}")
+
+
+def factorial_recursive(n):
+    if type(n) != int:
+        print("Factorial is defined just for integer numbers")
+    else:
+        if n < 0:
+            return "Factorial is not defined for negative numbers"
+        elif n == 0 or n == 1:
+            return 1
+        else:
+            return n * factorial_recursive(n - 1)
+
+# Example usage
+number = 5
+result = factorial_recursive(number)
+print(f"The factorial of {number} is: {result}")
+
+
+######################## EXERCISE 3 ########################
+def is_empty(value):
+    if value is None:
+        return True
+    elif isinstance(value, str) and not value.strip():
+        return True
+    elif isinstance(value, (list, tuple, dict, set)) and not value:
+        return True
+    else:
+        return False
+
+# Example usage
+empty_string = ""
+non_empty_string = "Hello, World!"
+empty_list = []
+non_empty_list = [1, 2, 3]
+empty_tuple = ()
+non_empty_tuple = (1, 2, 3)
+
+
+print(f"Is empty string empty? {is_empty(empty_string)}")
+print(f"Is non-empty string empty? {is_empty(non_empty_string)}")
+print(f"Is empty list empty? {is_empty(empty_list)}")
+print(f"Is non-empty list empty? {is_empty(non_empty_list)}")
+print(f"Is empty tuple empty? {is_empty(empty_tuple)}")
+print(f"Is non-empty tuple empty? {is_empty(non_empty_tuple)}")
+
+
+
+######################## EXERCISE 4 ########################
+def calculate_mean(values):
+    
+    count = 0
+    sum = 0
+    result = 0
+    
+    for value in values:
+        count += 1
+        sum += value
+    
+    result = sum / count
+    return result
+
+def calculate_median(values):
+    print("")
+    
+def calculate_mode(values):
+    print("")
+    
+def calculate_range(values):
+    print("")
+    
+def calculate_variance(values):
+    print("")
+    
+def calculate_std(values):
+    print("")
+    
+values = [2, 4, 5, 6]
+print(calculate_mean(values))
+print(calculate_median(values))
+print(calculate_mode(values))
+print(calculate_range(values))
+print(calculate_variance(values))
+print(calculate_std(values))
+    
+####################################################################
+######################## Exercises: Level 3 ########################
+####################################################################
+
+######################## EXERCISE 1 ########################
+
+
+######################## EXERCISE 2 ########################
+
+
+######################## EXERCISE 3 ########################
+
+
+######################## EXERCISE 4 ########################
+
+
+######################## EXERCISE 5 ########################

@@ -266,12 +266,58 @@ print(f"Standard Deviation: {pstdev(values)}")
 
 ######################## EXERCISE 1 ########################
 # Write a function called is_prime, which checks if a number is prime.
+def is_prime(number):
+    if type(number) != int or number < 0:
+        print("ERROR: El número pasado como parámetro debe ser un número entero positivo")
+    elif number == 0:
+        print("El cero no es primo porque no se puede dividir entre sí mismo y tampoco se puede escribir como un producto de primos. El cero es un numero aparte de todos")
+    elif number == 1:
+        print("El número 1 no es primo porque solo tiene un divisor")
+    else:
+        for n in range(2, number):
+            if number % n == 0: 
+                print(number, "NO es primo,", n, "es divisor") 
+                return False 
+            
+        print("Es primo") 
+        return True
+        
+is_prime(13) # Es primo
+is_prime(165) # 165 NO es primo, 3 es divisor
+is_prime(887) # Es primo
+is_prime(1542) # 1542 NO es primo, 2 es divisor
+is_prime(654977) # 654977 NO es primo, 103 es divisor
 
 
 ######################## EXERCISE 2 ########################
+# Write a functions which checks if all items are unique in the list.
+
+def check_unique_items(lista):
+    list_values = list(lista)
+    list_values.sort()
+    len_list = len(lista)
+    for i in list_values:
+        if list_values.count(i) > 1:
+            print("En la lista no todos los items son únicos. Se repite el", i) 
+            return False
+    
+    print("Todos los valores de la lista son únicos")
+    return True
+
+
+lista = [1,2,3,4,5,6,7,8,9,10]
+lista2 = [1,2,3,4,5,6,7,8,9,10, 8]
+lista3 = [1,2,2,3,5,4,5,6,7,8,9,10, 8]
+check_unique_items(lista)
+check_unique_items(lista2)
+check_unique_items(lista3)
+
 
 
 ######################## EXERCISE 3 ########################
+# Write a function which checks if all the items of the list are of the same data type.
+def check_same_data_type(lista):
+    
 
 
 ######################## EXERCISE 4 ########################

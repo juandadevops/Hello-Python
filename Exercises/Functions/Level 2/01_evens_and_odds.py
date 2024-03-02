@@ -1,4 +1,4 @@
-# Declare a function named evens_and_odds . It takes a positive integer as parameter and it counts number of evens and odds in the number.
+
 def evens_and_odds(positive_number):
     """It takes a positive integer as parameter and it counts number of evens and odds in the number
     Args:
@@ -18,6 +18,6 @@ def evens_and_odds(positive_number):
         print(f"The number of odds are {odds}")
         print(f"The number of evens are {evens}")     
     else:
-        print("El parametro debe ser un numero entero positivo")
+        print("The parameter must be a positive integer.")
     
 evens_and_odds(100)

@@ -1,14 +1,23 @@
 # importing the module 
 import json 
   
-# reading the data from the file 
-with open('countries-data.py', encoding="utf8") as f: 
+# reading the data from the file with encoding correctly
+with open('Exercises/Functions/Level 3/countries-data/countries-data.py', encoding="utf8") as f: 
     data = f.read() 
         
 # reconstructing the data as a dictionary 
 countries_data = json.loads(data) 
 
 def most_spoken_languages(countries_data, limit=10):
+    """ Function that return 10 or 20 most spoken languages in the world in descending order
+
+    Args:
+        countries_data (dict): All countries data to check the languages
+        limit (int, optional): Number of languages to be displayed. Defaults to 10.
+
+    Returns:
+        _type_: The most spoken languages are returned according to the established limit.
+    """
     # Extract all languages from the countries data
     all_languages = [language for country in countries_data for language in country['languages']]
 

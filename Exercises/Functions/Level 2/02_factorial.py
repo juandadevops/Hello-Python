@@ -1,5 +1,13 @@
 # Call your function factorial, it takes a whole number as a parameter and it return a factorial of the number
 def factorial(n):
+    """ Takes a whole number as a parameter and it return a factorial of the number
+
+    Args:
+        n (_type_): whole number
+
+    Returns:
+        _type_: Factorial of the number
+    """
     if type(n) != int:
         print("Factorial is defined just for integer numbers")
     else:
@@ -18,7 +26,7 @@ number = 5
 result = factorial(number)
 print(f"The factorial of {number} is: {result}")
 
-
+# Same but recursive
 def factorial_recursive(n):
     if type(n) != int:
         print("Factorial is defined just for integer numbers")

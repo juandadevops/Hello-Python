@@ -45,7 +45,6 @@ def calculate_mode(values):
             
     return moda
 
-    
 def calculate_range(values):
     list_values = list(values)
     list_values.sort()
@@ -75,8 +74,8 @@ def calculate_std(values):
     return sqrt(variance)
     
 values = [2, 4, 4, 1, 1, 2, 1, 3, 4, 4, 11]
-print("Operaciones estadísticas con funciones propias")
-print(f"Lista: {values}")
+print("Statistical operations with own functions")
+print(f"List: {values}")
 print(f"Mean: {calculate_mean(values)}")
 print(f"Median: {calculate_median(values)}")
 print(f"Mode: {calculate_mode(values)}")
@@ -84,7 +83,8 @@ print(f"Range: {calculate_range(values)}")
 print(f"Variance: {calculate_variance(values)}")
 print(f"Standard Deviation: {calculate_std(values)}")
 
-print("Operaciones estadísticas con librería statistics propia de Python")
+print("")
+print("Statistical operations with Python's own statistics library")
 print(f"Lista: {values}")
 print(f"Mean: {mean(values)}")
 print(f"Median: {median(values)}")

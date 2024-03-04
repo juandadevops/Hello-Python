@@ -1,4 +1,4 @@
-# Exercises: Level 2
+# Exercises: Level 1
 
 Ejercicios recogidos en [Github 30-Days-Of-Python](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/11_Day_Functions/11_functions.md), que los he resuelto y donde se tienen las soluciones de cada uno de ellos.
 

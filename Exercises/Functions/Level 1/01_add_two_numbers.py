@@ -7,7 +7,7 @@ def add_two_numbers (num1, num2):
         num2 (float): Seconds number to sum
 
     Returns:
-        _type_: The sum
+        float: The sum
     """
     return num1 + num2
 

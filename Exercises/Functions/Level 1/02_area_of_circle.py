@@ -8,7 +8,7 @@ def area_of_circle(radio):
         radio (float): radio of the circle
 
     Returns:
-        _type_: The area of the circle
+        float: The area of the circle
     """
     return math.pi * radio * radio
 

@@ -3,7 +3,7 @@ def add_all_nums(*values):
     """ Function that takes arbitrary number of arguments and sums all the arguments
 
     Returns:
-        _type_: The sum of all arguments
+        float: The sum of all arguments
     """
     result = 0
     for value in values:

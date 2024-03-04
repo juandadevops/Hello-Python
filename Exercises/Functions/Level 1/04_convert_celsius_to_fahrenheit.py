@@ -6,7 +6,7 @@ def convert_celsius_to_fahrenheit(temperature_celsius):
         temperature_celsius (float): Temperature in Celsius to convert in Fahrenheit
 
     Returns:
-        _type_: The temperature in Fahrenheit
+        float: The temperature in Fahrenheit
     """
     return (temperature_celsius * 9/5) + 32
     

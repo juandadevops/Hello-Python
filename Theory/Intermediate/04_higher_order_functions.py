@@ -6,9 +6,6 @@
 
 
 ## Function as a Parameter ##
-
-
-
 def sum_one(value):
     return value + 1
 

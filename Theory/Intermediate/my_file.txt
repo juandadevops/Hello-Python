@@ -1,0 +1,5 @@
+Mi nombre es Luis
+Mi apellido es Gonzalez
+40 años
+Python
+.NET

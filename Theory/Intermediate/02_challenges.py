@@ -100,6 +100,7 @@ fibonacci()
 
 
 """
+    TÍTULO: ¿ES UN NÚMERO PRIMO?
   Escribe un programa que se encargue de comprobar si un número es o no primo.
   Hecho esto, imprime los números primos entre 1 y 100.
 """
@@ -136,19 +137,41 @@ for i in range(0,101):
         
         
 """
+    TÍTULO: ÁREA DE UN POLÍGONO
   Crea una única función (importante que sólo sea una) que sea capaz
   de calcular y retornar el área de un polígono.
   - La función recibirá por parámetro sólo UN polígono a la vez.
   - Los polígonos soportados serán Triángulo, Cuadrado y Rectángulo.
   - Imprime el cálculo del área de un polígono de cada tipo.
 """
-def area_poligono():
-    return 0
+def triangulo(lado, altura):          # a square function
+    return 1/2 * lado * altura
+
+def cuadrado(lado, altura):            # a cube function
+    return lado * lado
+
+def rectangulo(lado, altura):        # an absolute value function
+    return lado * altura
+
+def area_poligono(poligono):
+    if poligono == 'triangulo':
+        return triangulo
+    elif poligono == 'cuadrado':
+        return cuadrado
+    elif poligono == 'rectangulo':
+        return rectangulo
     
-    
+
+result = area_poligono('triangulo')
+print(result(3,3))       # 4.5
+result = area_poligono('cuadrado')
+print(result(3,3))       # 9
+result = area_poligono('rectangulo')
+print(result(3,5))      # 15
     
 
 """
+    TÍTULO: ASPECT RATIO DE UNA IMAGEN
   Crea un programa que se encargue de calcular el aspect ratio de una
   imagen a partir de una url.
   - Url de ejemplo:
@@ -161,6 +184,7 @@ def aspect_ratio():
 
 
 """
+    TÍTULO: INVIRTIENDO CADENAS
   Crea un programa que invierta el orden de una cadena de texto
   sin usar funciones propias del lenguaje que lo hagan de forma automática.
   - Si le pasamos "Hola mundo" nos retornaría "odnum aloH"
@@ -195,3 +219,39 @@ print(reverse2("Hola Mundo"))
 
 
 
+"""
+    TÍTULO: CONTANDO PALABRAS
+  Crea un programa que cuente cuantas veces se repite cada palabra
+  y que muestre el recuento final de todas ellas.
+  - Los signos de puntuación no forman parte de la palabra.
+  - Una palabra es la misma aunque aparezca en mayúsculas y minúsculas.
+  - No se pueden utilizar funciones propias del lenguaje que
+    lo resuelvan automáticamente.
+"""
+def contando_palabras(texto):
+    
+    aux = ""
+    print()
+    return aux
+    
+    
+    
+""" 
+    TÍTULO: DECIMAL A BINARIO
+  Crea un programa se encargue de transformar un número
+  decimal a binario sin utilizar funciones propias del lenguaje que lo hagan directamente.
+"""
+
+
+
+""" 
+    TÍTULO: CÓDIGO MORSE
+  Crea un programa que sea capaz de transformar texto natural a código
+  morse y viceversa.
+  - Debe detectar automáticamente de qué tipo se trata y realizar
+    la conversión.
+  - En morse se soporta raya "—", punto ".", un espacio " " entre letras
+    o símbolos y dos espacios entre palabras "  ".
+  - El alfabeto morse soportado será el mostrado en
+    https://es.wikipedia.org/wiki/Código_morse.
+"""

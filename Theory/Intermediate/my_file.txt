@@ -1,6 +1,6 @@
 Mi nombre es Luis
 Mi apellido es Gonzalez
-40 aï¿½os
+40 años
 Python
 .NET
 Tambien me gusta el lenguaje Java

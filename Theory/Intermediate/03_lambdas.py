@@ -1,19 +1,20 @@
+###############
 ### LAMBDAS ###
-
+###############
+"""
+    Using a lambda function inside another function.
+"""
 sum_two_values = lambda first_value, second_value: first_value + second_value
-
-print(sum_two_values(5,5))
+print(sum_two_values(5,5))      # 10
 
 multiply_values = lambda value1, value2: value1 * value2 - 3
-print(multiply_values(5,5))
-
+print(multiply_values(5,5))     # 22
 
 def sum_three_values(value):
     return lambda value1, value2: value1 + value2 + value
 
-
 my_sum = sum_three_values(5)(5,5)
-print(my_sum)
+print(my_sum)     # 15
 
 
 def power(x):

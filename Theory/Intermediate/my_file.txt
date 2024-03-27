@@ -1,6 +1,6 @@
-Mi nombre es Luis
-Mi apellido es Gonzalez
-40 años
+My name IS Luis
+My surname is Gonzalez
+40 years old
 Python
 .NET
-Tambien me gusta el lenguaje Java
+I also like Java language

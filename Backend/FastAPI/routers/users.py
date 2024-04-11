@@ -1,17 +1,16 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 
-app = FastAPI()
+router = APIRouter(prefix="/users", tags=["users"], responses={404: {"message": "No encontrado"}})
 
 # Inicia el server: uvicorn users:app --reload
 
 
-@app.get("/usersjson")
+@router.get("/usersjson")
 async def usersjson(): 
     return [{"name": "Luis", "surname": "Gil", "age":  18, "url": "https:google.com"},
             {"name": "Mario", "surname": "López", "age":  45, "url": "https:google.com"},
             {"name": "Manuel", "surname": "Ramiro", "age":  32, "url": "https:google.com"}]
-    
     
     
 
@@ -27,24 +26,24 @@ users_list = [User(id=1, name="Luis", surname="Gil", age=18, url="https:google.c
          User(id=2, name="Mario", surname="López", age=45, url="https:google.com"),
          User(id=3, name="Manuel", surname="Ramiro", age=32, url="https:google.com")]
 
-@app.get("/users")
+@router.get("/")
 async def users():
     return users_list 
 
 # PATH
-@app.get("/user/{id}")
+@router.get("/user/{id}")
 async def uerById(id: int):
     return search_user(id)
     
 
 # QUERY
-@app.get("/userquery/")
+@router.get("/userquery/")
 async def user(id: int):
     return search_user(id)
     
     
     
-@app.post("/user/", response_model=User, status_code=201)
+@router.post("/", response_model=User, status_code=201)
 async def insert_user(user: User):
     if type(search_user(user.id)) == User:
         raise HTTPException(status_code=404, detail="El usuario ya existe")
@@ -53,7 +52,7 @@ async def insert_user(user: User):
         return user
     
     
-@app.put("/user/", response_model=User, status_code=200)
+@router.put("/", response_model=User, status_code=200)
 async def update_user(user: User):
     found = False
     
@@ -68,7 +67,7 @@ async def update_user(user: User):
         return user
     
     
-@app.delete("/user/{id}", status_code=202)
+@router.delete("/{id}", status_code=202)
 async def delete_user(id: int):
     found = False
     

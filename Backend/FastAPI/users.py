@@ -44,6 +44,43 @@ async def user(id: int):
     
     
     
+@app.post("/user/")
+async def insert_user(user: User):
+    if type(search_user(user.id)) == User:
+        return {"Error":"El usuario ya existe"}
+    else:
+        users_list.append(user)
+        return user
+    
+    
+@app.put("/user/")
+async def update_user(user: User):
+    found = False
+    
+    for index, saved_user in enumerate(users_list):
+        if saved_user.id == user.id:
+            users_list[index] = user
+            found = True
+          
+    if not found:
+        return {"Error":"No se ha actualizado el usuario"} 
+    else:
+        return user
+    
+    
+@app.delete("/user/{id}")
+async def delete_user(id: int):
+    found = False
+    
+    for index, saved_user in enumerate(users_list):
+        if saved_user.id == id:
+            del users_list[index]
+            found = True
+          
+    if not found:
+        return {"Error":"No se ha eliminado el usuario"} 
+
+
 def search_user(id: int):
     users = filter(lambda user: user.id == id, users_list)
     try:

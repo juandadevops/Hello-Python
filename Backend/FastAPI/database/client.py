@@ -8,10 +8,11 @@
 
 
 from pymongo import MongoClient
+from ConfigMaps import config
 
 # Base de datos local
 # db_client = MongoClient().local
 
 
 # Base de datos remota
-db_client = MongoClient("mongodb+srv://test:test@cluster0.lz0usti.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0").test
+db_client = MongoClient(config.connection_string_mongodb).test

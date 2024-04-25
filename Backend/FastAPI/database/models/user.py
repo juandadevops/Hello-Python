@@ -1,9 +1,11 @@
+##################
 ### User Model ###
+##################
 
 from pydantic import BaseModel
 from typing import Optional
 
-# Entidad User
+# User Entity
 class User(BaseModel):
     id: Optional[str]
     username: str

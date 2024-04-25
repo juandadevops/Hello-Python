@@ -1,18 +1,18 @@
+######################
 ### MongoDB Client ###
+######################
 
-# Descarga versión community: https://www.mongodb.com/try/download
-# Instalación:https://www.mongodb.com/docs/manual/tutorial
-# Módulo conexión MongoDB: pip install pymongo
-# Ejecución: sudo mongod --dbpath "/path/a/la/base/de/datos/"
-# Conexión: mongodb://localhost
-
+# Download community version: https://www.mongodb.com/try/download
+# Installation: https://www.mongodb.com/docs/manual/tutorial
+# MongoDB connection module: pip install pymongo
+# Execution: sudo mongod --dbpath "/path/a/la/base/de/datos/"
+# Connection: mongodb://localhost
 
 from pymongo import MongoClient
 from ConfigMaps import config
 
-# Base de datos local
+# Local Database
 # db_client = MongoClient().local
 
-
-# Base de datos remota
+# Remote Database
 db_client = MongoClient(config.connection_string_mongodb).test

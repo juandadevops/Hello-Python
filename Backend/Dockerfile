@@ -30,3 +30,8 @@ ENV PYTHONPATH "${PYTHONPATH}:/code"
 # This command will be run from the current working directory, the same /code directory you set above with WORKDIR /code.
 # Because the program will be started at /code and inside of it is the directory ./app with your code, Uvicorn will be able to see and import app from app.main.
 CMD ["uvicorn", "main:app", "--reload", "--host", "0.0.0.0", "--port", "80"]
+
+# Generata Image
+# docker build . -t python_app
+# Generate Container
+# docker run -d --name containerpython -p 80:80 python_app

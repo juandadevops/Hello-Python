@@ -10,3 +10,6 @@ Backend/FastAPI/routers/__pycache__/jwt_auth_users.cpython-312.pyc
 Backend/FastAPI/routers/__pycache__/products.cpython-312.pyc
 Backend/FastAPI/routers/__pycache__/users_db.cpython-312.pyc
 Backend/FastAPI/routers/__pycache__/users.cpython-312.pyc
+Backend/FastAPI/Secrets/secret.py
+Backend/FastAPI/Secrets/__pycache__/__init__.cpython-312.pyc
+Backend/FastAPI/Secrets/__pycache__/secret.cpython-312.pyc
